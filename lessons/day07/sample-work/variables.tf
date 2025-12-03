@@ -1,7 +1,3 @@
-variable environment {
-    default     = "dev"
-}
-
 variable "instance_count" {
     description = "Number of EC2 instance to create"
     type = number
