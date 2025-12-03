@@ -3,7 +3,7 @@
 resource "aws_instance" "name" {
   count = var.instance_count
   ami = "ami-0e001c9271cf7f3b9"
-    instance_type = "t2.micro"
+    instance_type = var.allowed_vm_types[1]
     # region = tolist(var.allowed_regions)[0]
     # monitoring = var.monitoring_enabled
 

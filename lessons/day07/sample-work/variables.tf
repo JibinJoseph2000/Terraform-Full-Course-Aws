@@ -13,6 +13,11 @@ variable "region" {
     default = "us-east-1"
 }
 
+variable "environment" {
+    type = string
+    default = "dev"
+}
+
 variable "monitoring_enabled" {
     description = "Enable detailed monitoring"
     type = bool
@@ -23,6 +28,11 @@ variable "associate_public_ip" {
     description = "Associate a public IP address"
     type = bool
     default = true
+}
+
+variable "allowed_vm_types" {
+  type = list(string)
+  default = ["t2.micro", "t2.small", "t3.micro", "t3.small"]
 }
 
 variable "cidr_block" {
