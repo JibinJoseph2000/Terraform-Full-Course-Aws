@@ -31,3 +31,14 @@ resource "aws_s3_bucket" "demo-bucket" {
     VPC         = aws_vpc.demo_vpc.id
   }
 }
+
+# Create aws s3 bucket
+resource "aws_s3_bucket" "demo-bucket-2" {
+  bucket = "jibin-demo-bucket-123456"
+
+  tags = {
+    Name        = "My bucket2"
+    Environment = "test"
+    VPC         = aws_vpc.demo_vpc.id
+  }
+}
